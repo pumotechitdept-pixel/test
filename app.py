@@ -1,13 +1,12 @@
 def test():
     print("Hello, World!")
 
-
-
 test()
 
 
 def test123(a):
-    print("This is a test function.",a)
+    return a + 5
 
-test123(10)
+result = test123(10)
+print(result)
 
