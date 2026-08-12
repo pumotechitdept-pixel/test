@@ -6,8 +6,8 @@ def test():
 test()
 
 
-def test123():
-    print("This is a test function.")
+def test123(a):
+    print("This is a test function.",a)
 
-test123()
+test123(10)
 
