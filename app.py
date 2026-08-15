@@ -10,3 +10,10 @@ def test123(a):
 result = test123(10)
 print(result)
 
+
+
+def multiply(a, b):
+    return a * b    
+
+res1 = multiply(2, 3)
+print(res1)
