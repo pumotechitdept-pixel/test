@@ -18,3 +18,8 @@ def test123(a):
 test_result = test123(10)
 print(test_result)
 
+def test123():
+    return "hello"
+
+teres = test123()
+print(teres)

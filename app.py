@@ -56,11 +56,6 @@ set1 = {"apple", "banana", "cherry",1,0}
 set2 = {False,"google", "microsoft", "apple", 1 ,True}
 set1.difference_update(set2)
 print(set1)
-
-
-
-
-
 #print(set2)
 
 
