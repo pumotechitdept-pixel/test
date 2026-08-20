@@ -11,3 +11,10 @@ def multiply(a,b):
 multiply_result = multiply(4,5)
 print(multiply_result)
 
+
+def test123(a):
+    return a + 5
+
+test_result = test123(10)
+print(test_result)
+
