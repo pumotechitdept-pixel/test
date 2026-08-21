@@ -6,7 +6,7 @@ name: Auto Build CI/CD
 
 on:
   push:
-    branches: [ main, pumo, mohan ]
+    branches: [ main, pumo, mohan, abdul]
   pull_request:
 
 jobs:
