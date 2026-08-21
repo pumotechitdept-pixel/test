@@ -27,5 +27,8 @@ print(teres)
 def test_multiply():
     assert multiply(2, 3) == 6
 
+
+
+
 test_multiply()
 print("All tests passed!")
