@@ -59,6 +59,7 @@ print(set1)
 #print(set2)
 
 
+
 def remove_duplicates(lst):
     return list(set(lst))
 

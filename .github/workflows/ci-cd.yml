@@ -35,6 +35,8 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true 
     needs: build-test
 
     steps:
