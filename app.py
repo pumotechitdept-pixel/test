@@ -60,4 +60,9 @@ print(set1)
 
 
 
+def remove_duplicates(lst):
+    return list(set(lst))
+
+res = remove_duplicates([1, 2, 3, 2, 1, 4, 5, 4])
+print(res)
 
