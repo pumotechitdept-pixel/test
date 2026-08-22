@@ -1,7 +1,4 @@
 
-
-
-  
 name: Auto Build CI/CD
 
 on:
@@ -53,6 +50,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          file: ./docker/Dockerfile
           push: true
           tags: mohan6891/django-ci-cd:latest
 
