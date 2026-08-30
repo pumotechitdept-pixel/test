@@ -58,6 +58,9 @@ set1.difference_update(set2)
 print(set1)
 #print(set2)
 
+def run_server():
+    print("Server is running...")
 
+run_server()
 
 
