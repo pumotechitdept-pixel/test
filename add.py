@@ -36,5 +36,6 @@ def test_addition():
     assert test123(5) == 10 
     print("Addition test passed!")
 
+
 test_addition()
 
