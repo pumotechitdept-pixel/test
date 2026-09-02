@@ -65,9 +65,9 @@ jobs:
 
       - name: Deploy to server
         env:
-          $SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-          $DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          $DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
