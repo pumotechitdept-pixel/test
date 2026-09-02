@@ -22,11 +22,11 @@ test_pandas_dataframe()
 
 def test_xlsdata():
     # Create a simple DataFrame
-    data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+    data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 40, 35]}
     df = pd.DataFrame(data)
 
     # Save the DataFrame to an Excel file
-    df.to_excel(r'C:\\Users\\Mohan\\Documents\\pandata\\test_data.xlsx', index=False)
+    df.to_excel('C:\\Users\\Mohan\\Documents\\pandata\\test_data.xlsx', index=False)
 
     # Read the Excel file back into a DataFrame
     df_read = pd.read_excel('C:\\Users\\Mohan\\Documents\\pandata\\test_data.xlsx')
@@ -39,8 +39,8 @@ def test_xlsdata():
 
     # Check if the data in the read DataFrame is as expected
     assert df_read['Name'].tolist() == ['Alice', 'Bob', 'Charlie'], "Read DataFrame names are incorrect"
-    assert df_read['Age'].tolist() == [25, 30, 35], "Read DataFrame ages are incorrect"
+    assert df_read['Age'].tolist() == [25, 40, 35], "Read DataFrame ages are incorrect"
 
-    print(df_read.shape)
+    print(df_read.describe())
     print("All tests passed for Excel data!")
 test_xlsdata()
