@@ -79,3 +79,17 @@ jobs:
               -o BatchMode=yes \
               -o ConnectTimeout=10 \
               "$DEPLOY_USER@$DEPLOY_HOST" "echo SSH_OK && docker pull mohan6891/django-ci-cd:latest && docker stop myapp || true && docker rm myapp || true && docker run -d --restart=always -p 80:80 mohan6891/django-ci-cd:latest"
+
+
+  debug:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+    steps:
+      - name: Show environment variables
+        run: |
+          echo "DEPLOY_HOST=[$DEPLOY_HOST]"
+          echo "DEPLOY_USER=[$DEPLOY_USER]"
+          echo "SSH_PRIVATE_KEY length: ${#SSH_PRIVATE_KEY}"
