@@ -43,5 +43,4 @@ def test_xlsdata():
 
     print(df_read.describe())
     print("All tests passed for Excel data!")
-    
 test_xlsdata()
