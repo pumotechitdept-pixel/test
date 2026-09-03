@@ -69,8 +69,8 @@ jobs:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
+          mkdir %USERPROFILE%\.ssh
+          New-Item -ItemType Directory -Force -Path $env:USERPROFILE\.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
