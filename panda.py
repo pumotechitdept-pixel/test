@@ -21,17 +21,17 @@ def test_pandas_dataframe():
 test_pandas_dataframe()
 
 def test_xlsdata():
-    # Create a simple DataFrame
+    #Create a simple DataFrame
     data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 40, 35]}
     df = pd.DataFrame(data)
 
-    # Save the DataFrame to an Excel file
+    #Save the DataFrame to an Excel file
     df.to_excel('C:\\Users\\Mohan\\Documents\\pandata\\test_data.xlsx', index=False)
 
     # Read the Excel file back into a DataFrame
     df_read = pd.read_excel('C:\\Users\\Mohan\\Documents\\pandata\\test_data.xlsx')
 
-    # Check if the read DataFrame has the correct shape
+    #Check if the read DataFrame has the correct shape
     assert df_read.shape == (3, 2), "Read DataFrame shape is incorrect"
 
     # Check if the columns are as expected
