@@ -39,3 +39,9 @@ def test_addition():
 
 test_addition()
 
+
+def test_subtraction():
+    assert test123(10) - 5 == 5
+    print("Subtraction test passed!")
+
+test_subtraction()
