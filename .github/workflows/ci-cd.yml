@@ -76,7 +76,7 @@ jobs:
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
           ssh -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=~/.ssh/known_hosts \
-              -o BatchMode=yes \
+              -o BatchMode=no \
               -o ConnectTimeout=20 \
               "$DEPLOY_USER@$DEPLOY_HOST" "echo SSH_OK && docker pull mohan6891/django-ci-cd:latest && docker stop myapp || true && docker rm myapp || true && docker run -d --restart=always -p 80:80 mohan6891/django-ci-cd:latest"
 
