@@ -74,10 +74,10 @@ jobs:
           printf "%s" "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
-          ssh -o StrictHostKeyChecking=yes \
+          ssh -o StrictHostKeyChecking=no \
               -o UserKnownHostsFile=~/.ssh/known_hosts \
               -o BatchMode=yes \
-              -o ConnectTimeout=10 \
+              -o ConnectTimeout=20 \
               "$DEPLOY_USER@$DEPLOY_HOST" "echo SSH_OK && docker pull mohan6891/django-ci-cd:latest && docker stop myapp || true && docker rm myapp || true && docker run -d --restart=always -p 80:80 mohan6891/django-ci-cd:latest"
 
   debug:
